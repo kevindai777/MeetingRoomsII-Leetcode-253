@@ -7,8 +7,8 @@ let intervals = [[0, 30], [5, 10], [15, 20]]
 //O(nlogn) solution that sorts the starting and ending times separately then
 //compares them.
 
-let starts = 0
-let ends = 0
+let starts = []
+let ends = []
 
 for (let interval of intervals) {
     starts.push(interval[0])
