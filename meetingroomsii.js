@@ -27,12 +27,15 @@ let startPointer = 0
 let endPointer = 0 
 let result = 0
 
-while (startPointer <= intervals.length) {
+//Go through all of the starting times
+while (startPointer < intervals.length) {
     //If a start time is AFTER an end time, another meeting room is not needed
     if (starts[startPointer] >= ends[endPointer]) {
         result -= 1
         endPointer++
     }
+    //If a start time is BEFORE an end time, that means that the current meeting
+    //hasn't finished yet and another meeting room is needed
     result += 1
     startPointer++
 }
